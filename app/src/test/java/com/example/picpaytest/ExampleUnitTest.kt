@@ -1,5 +1,7 @@
 package com.example.picpaytest
 
+import com.example.picpaytest.data.remote.ServiceRequest
+import com.example.picpaytest.feature.contacts.ContactsPresenter
 import org.junit.Test
 
 import org.junit.Assert.*
@@ -14,4 +16,5 @@ class ExampleUnitTest {
     fun addition_isCorrect() {
         assertEquals(4, 2 + 2)
     }
+
 }

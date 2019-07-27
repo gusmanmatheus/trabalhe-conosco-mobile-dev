@@ -1,3 +1,5 @@
 <resources>
-    <string name="app_name">PicPayTest</string>
+    <string name="app_name">TestePicPay</string>
+    <string name="name_db">"picpaydb"</string>
+    <string name="editTextInital">A quem você deseja pagar?</string>
 </resources>
