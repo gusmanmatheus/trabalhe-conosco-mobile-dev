@@ -24,6 +24,7 @@ class ContactsActivity : AppCompatActivity(), ContactsContract.View {
     }
 
     fun testList() {
+
         adapter.data = listOf(
             User(
                 0,
