@@ -9,24 +9,21 @@ import retrofit2.Call
 import retrofit2.Callback
 import retrofit2.Response
 
-class ServiceRequest() {
+class ServiceRequest {
 
     fun getUsers(
-        sucess:(List<User>)->Unit,
+        sucess:(ArrayList<User>)->Unit,
         failure:(error:String)->Unit
     ){
-
         request.searchUser()
-            .enqueue(object : Callback<List<User>> {
-            override fun onFailure(call: Call<List<User>>, t: Throwable) {
+            .enqueue(object : Callback<ArrayList<User>> {
+            override fun onFailure(call: Call<ArrayList<User>>, t: Throwable) {
                 failure(t.message.toString())
             }
 
-            override fun onResponse(call: Call<List<User>>, response: Response<List<User>>) {
+            override fun onResponse(call: Call<ArrayList<User>>, response: Response<ArrayList<User>>) {
                 response.body()?.let(sucess)
             }
-
-
         })
     }
 
@@ -45,5 +42,4 @@ class ServiceRequest() {
             }
         })
     }
-
 }

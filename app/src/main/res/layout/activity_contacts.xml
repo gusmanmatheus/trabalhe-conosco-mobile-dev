@@ -5,8 +5,8 @@
         xmlns:app="http://schemas.android.com/apk/res-auto"
         android:layout_width="match_parent"
         android:layout_height="match_parent"
-        android:background="#FF1D1E21"
-        tools:context=".feature.ContactsActivity">
+        android:background="@color/backGroundLayoutColorPattern"
+        tools:context=".feature.contacts.ContactsActivity">
 
     <android.support.design.widget.AppBarLayout
             android:id="@+id/main.appbar"
@@ -20,19 +20,19 @@
                 android:layout_width="match_parent"
                 android:layout_height="wrap_content"
                 app:layout_scrollFlags="exitUntilCollapsed|scroll"
-                android:background="#FF1D1E21"
+                android:background="@color/backGroundLayoutColorPattern"
                 android:fitsSystemWindows="true"
-
         >
 
             <TextView
+                    android:id="@+id/titleContacts"
                     android:layout_width="match_parent"
                     android:layout_height="match_parent"
-                    android:textSize="40dp"
+                    android:textSize="@dimen/textSize_giant"
                     android:text="Contatos"
-                    android:layout_marginTop="16dp"
-                    android:layout_marginLeft="16dp"
-                    android:textColor="#FFFFFF"/>
+                    android:layout_marginTop="@dimen/margin_big"
+                    android:layout_marginLeft="@dimen/margin_big"
+                    android:textColor="@color/whinte"/>
 
 
         </android.support.design.widget.CollapsingToolbarLayout>
@@ -45,28 +45,25 @@
             app:layout_behavior="@string/appbar_scrolling_view_behavior"
     >
 
-        <EditText android:id="@+id/procurar_Contatos_Id"
+        <EditText android:id="@+id/searchContacts"
                   android:layout_width="wrap_content"
                   android:layout_height="wrap_content"
                   android:background="@drawable/field_search"
                   android:layout_gravity="center"
-                  android:hint="@string/editTextInital"
-                  android:paddingLeft="40dp"
-                  android:paddingRight="40dp"
-                  android:paddingBottom="6dp"
-                  android:layout_marginTop="16dp"
-                  android:layout_marginBottom="10dp"
-                  android:layout_marginRight="16dp"
-                  android:layout_marginLeft="16dp"
-                  android:textSize="20dp"
-                  android:textColor="#abb0bd"
-                  android:textColorHint="#abb0bd"
+                  android:hint="@string/searchContactsHint"
+                  android:paddingLeft="@dimen/padding_big"
+                  android:paddingRight="@dimen/padding_big"
+                  android:layout_margin="@dimen/margin_medium"
+                  android:textSize="@dimen/textSize_medium"
+                  android:textColor="@color/grayColor"
+                  android:textColorHint="@color/grayColor"
                   android:textColorLink="@color/colorPrimary"/>
 
         <android.support.v7.widget.RecyclerView
                 android:layout_width="match_parent"
                 android:layout_height="match_parent"
-                android:id="@+id/recyclerContacts">
+                android:id="@+id/recyclerContacts"
+        >
 
         </android.support.v7.widget.RecyclerView>
 

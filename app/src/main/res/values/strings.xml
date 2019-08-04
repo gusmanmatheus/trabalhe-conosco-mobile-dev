@@ -1,5 +1,25 @@
 <resources>
     <string name="app_name">TestePicPay</string>
     <string name="name_db">"picpaydb"</string>
-    <string name="editTextInital">A quem você deseja pagar?</string>
+
+    <string name="searchContactsHint">A quem você deseja pagar?</string>
+
+    <string name="registerACard">"Cadastre um cartão \n de crédito"</string>
+    <string name="infoText">Para fazer pagamentos para outras\n pessoas você precisa cadastrar um \n cartão de crédito
+        pessoal.
+    </string>
+    <string name="registerCard">Cadastrar cartão</string>
+    <string name="holderNameHint">Nome titular</string>
+    <string name="numberCardHint">Numero do cartao</string>
+    <string name="expirationDateHint">Vencimento</string>
+    <string name="cvvHint">CVV</string>
+
+    //Screens
+    <string name="contactsToPriming">contactsToPriming</string>
+    <string name="primingToRegister">primingToRegister</string>
+    <string name="cardRegisterToPayment">cardRegisterToPayment</string>
+    <string name="userRegisterToPayment">useRegisterToPayment</string>
+
+    <string name="errorStoreCard">Algum erro ocorreu ao cadastrar o cartao</string>
+
 </resources>

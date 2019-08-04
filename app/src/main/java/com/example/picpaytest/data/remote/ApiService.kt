@@ -12,8 +12,7 @@ import retrofit2.http.POST
 
 interface ApiService {
     @GET("users")
-    fun searchUser(): Call<List<User>>
-
+    fun searchUser(): Call<ArrayList<User>>
 
         @POST("transaction")
     fun sendPayment(@Body payment: Payment):Call<PaymentCallback>

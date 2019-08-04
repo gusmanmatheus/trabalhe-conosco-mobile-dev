@@ -13,7 +13,7 @@ class CREDIT_CARD {
                 " ${CARD_NUMBER} text not null," +
                 " ${NAME_HOLDER} text not null," +
                 " ${EXPIRY_DATE} text not null, " +
-                " ${CVV} int not null  );"
+                " ${CVV} text not null  );"
 
 
     }

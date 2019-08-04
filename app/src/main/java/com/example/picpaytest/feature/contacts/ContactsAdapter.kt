@@ -12,9 +12,8 @@ class ContactsAdapter: BaseAdapter<User>() {
         get() = R.layout.itemlist
 
     override fun bind(itemView: View, user: User) {
-
         itemView.nameUser.text= user.name
         itemView.nickUser.text= user.username
-      itemView.photoUser.loadImage(user.img)
+        itemView.photoUser.loadImage(user.img)
     }
 }

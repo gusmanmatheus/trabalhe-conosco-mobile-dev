@@ -1,6 +1,12 @@
 <?xml version="1.0" encoding="utf-8"?>
 <resources>
+    //Project
     <color name="colorPrimary">#008577</color>
     <color name="colorPrimaryDark">#00574B</color>
     <color name="colorAccent">#FF176D44</color>
+
+    //ActivityContacts
+    <color name="grayColor">#abb0bd</color>
+    <color name="backGroundLayoutColorPattern">#FF1D1E21</color>
+    <color name="whinte">#ffffff</color>
 </resources>

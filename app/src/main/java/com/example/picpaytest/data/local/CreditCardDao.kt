@@ -2,7 +2,6 @@ package com.example.picpaytest.data.local
 
 import android.content.ContentValues
 import android.content.Context
-import com.example.picpaytest.R
 import com.example.picpaytest.base.BaseDAO
 import com.example.picpaytest.data.model.CreditCard
 import java.lang.Exception
@@ -46,7 +45,7 @@ class CreditCardDao(val context: Context): BaseDAO(context){
                         cursor.getString(1),
                         cursor.getString(2),
                         cursor.getString(3),
-                        cursor.getInt(4)
+                        cursor.getString(4)
                 ))
             }while (cursor.moveToNext())
         }

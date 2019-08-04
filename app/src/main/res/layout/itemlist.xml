@@ -4,16 +4,16 @@
         android:layout_width="match_parent"
         android:layout_height="wrap_content"
         android:orientation="horizontal"
-        android:layout_marginBottom="15dp"
-        android:layout_marginTop="15dp"
+        android:layout_marginBottom="@dimen/margin_medium"
+        android:layout_marginTop="@dimen/margin_medium"
         xmlns:tools="http://schemas.android.com/tools">
 
     <ImageView
             android:id="@+id/photoUser"
-            android:layout_width="70dp"
-            android:layout_height="70dp"
-            android:layout_marginLeft="20dp"
-            android:src="@color/colorPrimary"
+            android:layout_width="@dimen/imageSize"
+            android:layout_height="@dimen/imageSize"
+            android:layout_marginLeft="@dimen/margin_medium"
+            tools:src="@color/colorPrimary"
     />
 
     <LinearLayout android:layout_width="match_parent"
@@ -23,20 +23,20 @@
         <TextView android:id="@+id/nameUser"
                   android:layout_width="wrap_content"
                   android:layout_height="wrap_content"
-                  android:layout_marginTop="10dp"
-                  android:layout_marginLeft="20dp"
+                  android:layout_marginTop="@dimen/margin_small"
+                  android:layout_marginLeft="@dimen/margin_medium"
                   tools:text="User Name"
-                  android:textSize="20dp"
-                  android:textColor="#FFFFFF"/>
+                  android:textSize="@dimen/textSize_medium"
+                  android:textColor="@color/whinte"/>
 
         <TextView
                 android:id="@+id/nickUser"
                 android:layout_width="wrap_content"
                 android:layout_height="wrap_content"
-                android:layout_marginLeft="20dp"
-                android:textSize="20dp"
-                android:text="Nick User"
-                android:textColor="#FFFFFF"/>
+                android:layout_marginLeft="@dimen/margin_medium"
+                android:textSize="@dimen/textSize_medium"
+                tools:text="Nick User"
+                android:textColor="@color/whinte"/>
 
     </LinearLayout>
 
