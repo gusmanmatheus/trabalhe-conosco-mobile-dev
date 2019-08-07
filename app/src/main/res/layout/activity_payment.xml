@@ -1,0 +1,166 @@
+<?xml version="1.0" encoding="utf-8"?>
+<RelativeLayout
+        xmlns:android="http://schemas.android.com/apk/res/android"
+        xmlns:tools="http://schemas.android.com/tools"
+        xmlns:app="http://schemas.android.com/apk/res-auto"
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        android:background="@color/backGroundLayoutColorPattern"
+        tools:context=".feature.payment.PaymentActivity"
+>
+
+
+
+    <LinearLayout
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:orientation="vertical"
+            android:layout_marginBottom="@dimen/margin_small"
+            android:layout_alignParentBottom="true"
+    >
+
+        <Button
+                android:id="@+id/sendPayment"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_gravity="center"
+                android:text="Pagar"
+                android:textColor="@color/whinte"
+                android:visibility="visible"
+                android:background="@drawable/backgroundbuttongray"
+        />
+    </LinearLayout>
+
+
+    <ScrollView
+            android:layout_width="match_parent"
+            android:layout_height="match_parent"
+            android:layout_marginBottom="@dimen/margin_extra_big"
+            android:orientation="vertical">
+        <android.support.constraint.ConstraintLayout
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+
+        >
+            <android.support.v7.widget.Toolbar
+                    android:id="@+id/toolbarPayment"
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    tools:ignore="MissingConstraints"
+            >
+
+            </android.support.v7.widget.Toolbar>
+            <ImageView
+                    android:id="@id/photoUser"
+                    android:layout_width="@dimen/imageSize"
+                    android:layout_height="@dimen/imageSize"
+                    android:src="@mipmap/ic_launcher_round"
+                    app:layout_constraintEnd_toEndOf="parent"
+                    android:layout_marginEnd="@dimen/margin_small"
+                    app:layout_constraintStart_toStartOf="parent"
+                    android:layout_marginStart="@dimen/margin_small"
+                    android:layout_marginTop="@dimen/margin_giant"
+                    tools:background="@color/whinte"
+                    app:layout_constraintTop_toTopOf="parent"
+            />
+            <TextView
+                    android:id="@+id/userNick"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:textColor="@color/whinte"
+                    tools:text="@string/toolsNickname"
+                    android:layout_marginTop="@dimen/margin_small"
+                    android:layout_marginEnd="@dimen/margin_small"
+                    android:layout_marginStart="@dimen/margin_small"
+                    app:layout_constraintTop_toBottomOf="@id/photoUser"
+                    app:layout_constraintEnd_toEndOf="parent"
+                    app:layout_constraintStart_toStartOf="parent"
+            />
+
+            <TextView android:layout_width="wrap_content"
+                      android:layout_height="wrap_content"
+                      android:textColor="@color/grayColor"
+                      android:text="@string/symbolReal"
+                      android:layout_marginEnd="@dimen/margin_small"
+                      android:layout_marginTop="@dimen/margin_small"
+                      app:layout_constraintEnd_toStartOf="@+id/valuePayment"
+                      app:layout_constraintBottom_toBottomOf="@+id/valuePayment"
+                      app:layout_constraintTop_toTopOf="@+id/valuePayment"
+            />
+
+            <EditText
+                    android:id="@+id/valuePayment"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:textColor="@color/colorAccent"
+                    android:hint="@string/hintZero"
+                    android:textColorHint="@color/grayColor"
+                    android:textSize="@dimen/textSize_extra_big"
+                    android:inputType="numberDecimal"
+                    android:layout_marginTop="@dimen/margin_giant"
+                    android:layout_marginEnd="@dimen/margin_small"
+                    android:layout_marginStart="@dimen/margin_small"
+                    app:layout_constraintTop_toBottomOf="@id/userNick"
+                    app:layout_constraintEnd_toEndOf="parent"
+                    app:layout_constraintStart_toStartOf="parent"
+            />
+
+            <TextView
+                    android:id="@+id/nameCard"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    tools:text="@string/toolsExempleCard"
+                    android:textColor="@color/whinte"
+                    android:textSize="@dimen/margin_medium"
+                    android:layout_marginTop="@dimen/margin_giant"
+                    android:layout_marginEnd="@dimen/margin_small"
+                    android:layout_marginStart="@dimen/margin_small"
+                    app:layout_constraintTop_toBottomOf="@id/valuePayment"
+                    app:layout_constraintEnd_toEndOf="parent"
+                    app:layout_constraintStart_toStartOf="parent"
+            />
+
+            <TextView android:layout_width="wrap_content"
+                      android:layout_height="wrap_content"
+                      android:textColor="@color/whinte"
+                      android:text="@string/ball"
+                      app:layout_constraintStart_toEndOf="@+id/nameCard"
+                      app:layout_constraintBottom_toBottomOf="@+id/nameCard"
+                      app:layout_constraintTop_toTopOf="@+id/nameCard"
+                      android:id="@+id/ball"
+            />
+
+            <Button android:id="@+id/changeCard"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:text="editar"
+                    android:background="@color/transparent"
+                    android:textColor="@color/colorAccent"
+                    app:layout_constraintTop_toTopOf="@+id/nameCard"
+                    app:layout_constraintStart_toEndOf="@+id/ball"
+                    app:layout_constraintBottom_toBottomOf="@+id/nameCard"
+            />
+
+        </android.support.constraint.ConstraintLayout>
+    </ScrollView>
+
+    <FrameLayout
+            android:id="@+id/loading"
+            android:layout_width="match_parent"
+            android:layout_height="match_parent"
+            android:visibility="gone"
+            android:background="@color/greenWeak"
+            tools:visibility="gone"
+    >
+
+        <ProgressBar
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_gravity="center"
+        />
+
+    </FrameLayout>
+
+
+
+</RelativeLayout>

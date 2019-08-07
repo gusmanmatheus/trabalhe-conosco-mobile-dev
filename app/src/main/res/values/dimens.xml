@@ -1,0 +1,32 @@
+<?xml version="1.0" encoding="utf-8"?>
+<resources>
+
+
+    
+    //ActivityPriming
+
+    <dimen name="imageCardSideTop">150dp</dimen>
+
+
+    <dimen name="margin_small">8dp</dimen>
+    <dimen name="margin_medium">16dp</dimen>
+    <dimen name="margin_big">24dp</dimen>
+    <dimen name="margin_giant">32dp</dimen>
+    <dimen name="margin_extra_big">66dp</dimen>
+
+    <dimen name="padding_small">8dp</dimen>
+    <dimen name="padding_medium">16dp</dimen>
+    <dimen name="padding_big">24dp</dimen>
+    <dimen name="padding_giant">32dp</dimen>
+
+    <dimen name="textSize_giant">32sp</dimen>
+    <dimen name="textSize_medium">16sp</dimen>
+    <dimen name="textSize_small">12sp</dimen>
+    <dimen name="textSize_big">24sp</dimen>
+    <dimen name="textSize_extra_big">52sp</dimen>
+
+    <dimen name="imageSize">66dp</dimen>
+    <dimen name="imageSize_big">120dp</dimen>
+
+
+</resources>
