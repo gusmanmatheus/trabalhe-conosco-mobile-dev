@@ -33,7 +33,6 @@ class ContactsActivity : AppCompatActivity(), ContactsContract.View {
     override fun setListUsers(users: ArrayList<User>) {
         adapter.data = users
         adapter.onItemClick = {user ->
-            Toast.makeText(this,"Clickou no  ${user.name}",Toast.LENGTH_LONG).show()
             val intent = Intent(this,PrimingActivity::class.java)
             intent.putExtra(this.resources.getString(R.string.contactsToPriming),user)
             startActivity(intent)
