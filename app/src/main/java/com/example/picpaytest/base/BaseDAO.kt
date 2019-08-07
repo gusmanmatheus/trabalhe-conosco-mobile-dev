@@ -5,7 +5,6 @@ import android.database.sqlite.SQLiteDatabase
 import android.database.sqlite.SQLiteOpenHelper
 import com.example.picpaytest.R
 import com.example.picpaytest.data.local.CREDIT_CARD
-import com.example.picpaytest.data.model.CreditCard
 
 abstract class BaseDAO (context: Context):SQLiteOpenHelper(
     context,

@@ -1,7 +1,5 @@
 package com.example.picpaytest.feature.primingCard
 
-import com.example.picpaytest.data.model.User
-
 class PrimingPresenter(
     override var view:PrimingContract.View
 ):PrimingContract.Presenter {

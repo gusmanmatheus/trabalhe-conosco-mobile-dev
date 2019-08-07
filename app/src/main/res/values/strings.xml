@@ -1,25 +1,39 @@
 <resources>
     <string name="app_name">TestePicPay</string>
     <string name="name_db">"picpaydb"</string>
+    <string name="PREFERENCESCARD">PREFERENCESCARD</string>
 
     <string name="searchContactsHint">A quem você deseja pagar?</string>
-
     <string name="registerACard">"Cadastre um cartão \n de crédito"</string>
     <string name="infoText">Para fazer pagamentos para outras\n pessoas você precisa cadastrar um \n cartão de crédito
         pessoal.
     </string>
+    <string name="pagamentoNaoConcluido">pagamento nao foi concluído </string>
+    <string name="possivelErroComCartao">Provavel erro com cartão</string>
     <string name="registerCard">Cadastrar cartão</string>
     <string name="holderNameHint">Nome titular</string>
-    <string name="numberCardHint">Numero do cartao</string>
+    <string name="numberCardHint">Número do cartão</string>
     <string name="expirationDateHint">Vencimento</string>
     <string name="cvvHint">CVV</string>
+    <string name="ball">" •"</string>
+    <string name="toolsExempleCard">exempleCard001</string>
+    <string name="toolsNickname">Nick Name</string>
+    <string name="toolsUsername">User Name</string>
+    <string name="symbolReal">R$</string>
+    <string name="hintZero">0,00</string>
+    <string name="textRecibo">Recibo</string>
+    <string name="hintHourDate">00/00/00/ as 00:00</string>
+    <string name="hintTransaction">"Transação: 000000</string>
+    <string name="TextcredCard">Cartão de Credito</string>
+    <string name="textAllValue">Total Pago</string>
 
     //Screens
     <string name="contactsToPriming">contactsToPriming</string>
     <string name="primingToRegister">primingToRegister</string>
     <string name="cardRegisterToPayment">cardRegisterToPayment</string>
     <string name="userRegisterToPayment">useRegisterToPayment</string>
-
-    <string name="errorStoreCard">Algum erro ocorreu ao cadastrar o cartao</string>
+    <string name="cardListCardToPayment">cardListCardToPayment</string>
+    <string name="error">Erro</string>
+    <string name="errorStoreCard">Algum erro ocorreu ao cadastrar o cartão</string>
 
 </resources>

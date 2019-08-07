@@ -12,12 +12,14 @@ class App: Application(){
         modulesContact,
         modulesPriming,
         modulesRegister,
-        modulesPayment
+        modulesPayment,
+        modulesListCard
     )
     override fun onCreate() {
         super.onCreate()
         startKoin {
             androidContext(this@App)
-            modules(modules)}
+            modules(modules)
+        }
     }
 }

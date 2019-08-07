@@ -12,14 +12,31 @@
             android:roundIcon="@mipmap/ic_launcher_round"
             android:supportsRtl="true"
             android:theme="@style/AppNoTheme">
-        <activity android:name=".feature.payment.PaymentActivity">
+        <activity android:name=".feature.listCard.ListCardActivity"
+                  android:screenOrientation="portrait"
+        >
         </activity>
-        <activity android:name=".feature.registerCard.RegisterActivity">
+        <activity android:name=".feature.payment.PaymentActivity"
+                  android:windowSoftInputMode="stateVisible"
+                  android:screenOrientation="portrait"
+
+        >
         </activity>
-        <activity android:name=".feature.primingCard.PrimingActivity">
+        <activity android:name=".feature.registerCard.RegisterActivity"
+                  android:windowSoftInputMode="stateAlwaysHidden"
+                  android:screenOrientation="portrait"
+        >
         </activity>
-        <activity android:name=".feature.contacts.ContactsActivity">
+        <activity android:name=".feature.primingCard.PrimingActivity"
+                  android:screenOrientation="portrait"
+        >
+        </activity>
+        <activity android:name=".feature.contacts.ContactsActivity"
+                  android:windowSoftInputMode="stateHidden"
+                  android:screenOrientation="portrait"
+        >
             <intent-filter>
+
                 <action android:name="android.intent.action.MAIN"/>
 
                 <category android:name="android.intent.category.LAUNCHER"/>

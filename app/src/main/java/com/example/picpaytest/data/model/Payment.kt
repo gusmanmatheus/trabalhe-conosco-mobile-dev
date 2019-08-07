@@ -6,7 +6,7 @@ data class Payment (
     @SerializedName("card_number")
     val cardNumber: String,
     val cvv: String,
-    val value: Double,
+    val value: String,
     @SerializedName("expiry_date")
     val expiryDate:String,
     @SerializedName("destination_user_id")

@@ -9,9 +9,10 @@ class RegisterPresenter(
 ):RegisterContract.Presenter {
 
     override fun storeCard(card:CreditCard) {
-        if (db.insert(card)){
+        if (db.insert(card)) {
             view.nextActivity(card)
+        } else {
+            view.dialogError()
         }
-        view.dialogError("Error ao armazenar")
     }
 }

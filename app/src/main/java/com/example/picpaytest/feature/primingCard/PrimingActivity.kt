@@ -19,7 +19,6 @@ class PrimingActivity : AppCompatActivity(),PrimingContract.View {
         setToolbar()
         register.setOnClickListener {
             presenter.route()
-
         }
     }
     override fun recoveryData():User {
@@ -48,6 +47,5 @@ class PrimingActivity : AppCompatActivity(),PrimingContract.View {
             else -> return super.onOptionsItemSelected(item)
         }
         return true
-        return super.onOptionsItemSelected(item)
     }
 }

@@ -4,6 +4,11 @@ import com.example.picpaytest.data.local.CreditCardDao
 import com.example.picpaytest.data.remote.ServiceRequest
 import com.example.picpaytest.feature.contacts.ContactsContract
 import com.example.picpaytest.feature.contacts.ContactsPresenter
+import com.example.picpaytest.feature.listCard.ListCardContract
+import com.example.picpaytest.feature.listCard.ListCardPresenter
+import com.example.picpaytest.feature.payment.CardSP
+import com.example.picpaytest.feature.payment.PaymentContract
+import com.example.picpaytest.feature.payment.PaymentPresenter
 import com.example.picpaytest.feature.primingCard.PrimingContract
 import com.example.picpaytest.feature.primingCard.PrimingPresenter
 import com.example.picpaytest.feature.registerCard.RegisterContract
@@ -17,6 +22,9 @@ val baseModules = module {
     }
     factory {
         ServiceRequest()
+    }
+    factory {
+        CardSP(get())
     }
 }
 
@@ -45,13 +53,27 @@ val modulesRegister = module {
             view = view,
             db = get()
         )
-    } bind PrimingPresenter::class
+    } bind RegisterPresenter::class
 }
 
 val modulesPayment = module {
-    factory { (view:PrimingContract.View)->
-            PrimingPresenter(
-                view = view
+    factory {
+            (view:PaymentContract.View)->
+            PaymentPresenter(
+                view = view,
+                service = get(),
+                shared = get()
             )
-    }bind PrimingPresenter::class
+    }bind PaymentPresenter::class
+}
+
+val modulesListCard = module {
+    factory {
+        (view:ListCardContract.View)->
+        ListCardPresenter(
+            view = view,
+            db = get(),
+            shared = get()
+        )
+    }bind ListCardPresenter::class
 }

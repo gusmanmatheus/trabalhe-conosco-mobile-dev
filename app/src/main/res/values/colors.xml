@@ -9,4 +9,7 @@
     <color name="grayColor">#abb0bd</color>
     <color name="backGroundLayoutColorPattern">#FF1D1E21</color>
     <color name="whinte">#ffffff</color>
+    <color name="transparent" >#00000000</color>
+    <color name="greenWeak">#345DA359</color>
+    <color name="blackStronger">#151516</color>
 </resources>

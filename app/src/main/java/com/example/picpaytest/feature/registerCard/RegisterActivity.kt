@@ -1,17 +1,14 @@
 package com.example.picpaytest.feature.registerCard
 
-import android.content.DialogInterface
 import android.content.Intent
 import android.support.v7.app.AppCompatActivity
 import android.os.Bundle
-import android.os.Message
 import android.support.v7.app.AlertDialog
+import android.view.MenuItem
 import android.view.View
-import android.widget.Toast
 import com.example.picpaytest.R
 import com.example.picpaytest.base.changeText
 import com.example.picpaytest.data.model.CreditCard
-import com.example.picpaytest.data.model.Payment
 import com.example.picpaytest.data.model.User
 import com.example.picpaytest.feature.payment.PaymentActivity
 import kotlinx.android.synthetic.main.activity_register.*
@@ -24,6 +21,7 @@ class RegisterActivity : AppCompatActivity(), RegisterContract.View {
     override fun onCreate(savedInstanceState: Bundle?) {
         super.onCreate(savedInstanceState)
         setContentView(R.layout.activity_register)
+        setToolbar()
         numberCardEd.changeText {
             buttonOnOf()
         }
@@ -45,20 +43,21 @@ class RegisterActivity : AppCompatActivity(), RegisterContract.View {
         }
     }
 
-    override fun dialogError(message: String) {
+    override fun dialogError() {
         var alertDialog = AlertDialog.Builder(this)
-        alertDialog.setTitle(message)
+        alertDialog.setTitle(this.resources.getString(R.string.error))
         alertDialog.setMessage(this.resources.getString(R.string.errorStoreCard))
-        alertDialog.setPositiveButton("Ok", { dialog,which ->
+        alertDialog.setPositiveButton("Ok", { _, _ ->
         })
+        alertDialog.show()
     }
 
-    override fun nextActivity(card: CreditCard) {
+    override fun nextActivity(creditCard: CreditCard) {
 
         val user:User = intent.getSerializableExtra(this.resources.getString(R.string.primingToRegister)) as User
         val intent = Intent(this,PaymentActivity::class.java)
         intent.putExtra(this.resources.getString(R.string.userRegisterToPayment),user)
-        intent.putExtra(this.resources.getString(R.string.cardRegisterToPayment),card)
+        intent.putExtra(this.resources.getString(R.string.cardRegisterToPayment),creditCard)
         startActivity(intent)
 
     }
@@ -75,5 +74,23 @@ class RegisterActivity : AppCompatActivity(), RegisterContract.View {
         }
 
     }
+    fun setToolbar(){
+        setSupportActionBar(toolbarRegister)
+        supportActionBar?.setDisplayHomeAsUpEnabled(true)
+        supportActionBar?.setHomeButtonEnabled(true)
+        supportActionBar?.title = ""
+        supportActionBar?.setHomeAsUpIndicator(R.mipmap.ic_comeback)
+    }
+    override fun onOptionsItemSelected(item: MenuItem?): Boolean {
+        when (item?.getItemId()) {
+            android.R.id.home
+            -> {
+                onBackPressed()
+            }
+            else -> return super.onOptionsItemSelected(item)
+        }
+        return true
+    }
+
 
 }

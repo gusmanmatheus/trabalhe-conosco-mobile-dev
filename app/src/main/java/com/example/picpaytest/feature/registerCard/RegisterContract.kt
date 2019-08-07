@@ -6,9 +6,8 @@ import com.example.picpaytest.data.model.CreditCard
 
 interface RegisterContract {
     interface View:BaseView<Presenter>{
-        fun dialogError(message:String)
+        fun dialogError()
         fun nextActivity(creditCard: CreditCard)
-
     }
     interface Presenter:BasePresenter<View> {
         fun storeCard(card: CreditCard)

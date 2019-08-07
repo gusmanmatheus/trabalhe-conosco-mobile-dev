@@ -1,0 +1,76 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout
+        xmlns:android="http://schemas.android.com/apk/res/android"
+
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:orientation="vertical"
+        android:weightSum="2"
+        android:background="@color/backGroundLayoutColorPattern"
+>
+
+    <LinearLayout
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:orientation="horizontal"
+            android:layout_marginTop="@dimen/margin_small"
+            android:layout_weight="1"
+            android:weightSum="2"
+    >
+
+        <TextView
+                android:id="@+id/numberCardOfList"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_weight="1"
+                android:textColorHint="@color/whinte"
+                android:textColor="@color/whinte"
+                android:textSize="@dimen/textSize_medium"
+                android:hint="@string/numberCardHint"
+        />
+
+        <TextView
+                android:id="@+id/holderNameOfList"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_weight="1"
+                android:textColorHint="@color/whinte"
+                android:textColor="@color/whinte"
+                android:textSize="@dimen/textSize_medium"
+                android:hint="@string/holderNameHint"
+        />
+    </LinearLayout>
+
+    <LinearLayout
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_marginBottom="@dimen/margin_small"
+            android:orientation="horizontal"
+            android:layout_weight="1"
+            android:weightSum="2"
+    >
+
+        <TextView
+                android:id="@+id/expirationDateOfList"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_weight="1"
+                android:textColorHint="@color/whinte"
+                android:textColor="@color/whinte"
+                android:textSize="@dimen/textSize_medium"
+                android:hint="@string/expirationDateHint"
+        />
+
+        <TextView android:id="@+id/cvvCardOfList"
+                  android:layout_width="match_parent"
+                  android:layout_height="wrap_content"
+                  android:layout_weight="1"
+                  android:textColorHint="@color/whinte"
+                  android:textColor="@color/whinte"
+                  android:textSize="@dimen/textSize_medium"
+                  android:hint="@string/cvvHint"
+        />
+
+    </LinearLayout>
+
+</LinearLayout>

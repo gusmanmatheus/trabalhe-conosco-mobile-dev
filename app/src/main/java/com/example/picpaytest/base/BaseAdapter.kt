@@ -35,8 +35,8 @@ abstract class BaseAdapter<T>: RecyclerView.Adapter<BaseAdapter<T>.Holder<T>>(){
             }
         }
 
-        fun rendle( user: T){
-            bind(this.itemView, user)
+        fun rendle(item: T){
+            bind(this.itemView, item)
         }
     }
 

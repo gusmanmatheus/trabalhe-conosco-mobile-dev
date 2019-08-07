@@ -6,13 +6,15 @@
         android:layout_width="match_parent"
         android:layout_height="match_parent"
         android:background="@color/backGroundLayoutColorPattern"
-        tools:context=".feature.primingCard.PrimingActivity">
+        tools:context=".feature.primingCard.PrimingActivity"
+>
 
     <android.support.v7.widget.Toolbar
             android:id="@+id/toolbarPriming"
             android:layout_width="match_parent"
             android:layout_height="wrap_content"
-            tools:ignore="MissingConstraints">
+            tools:ignore="MissingConstraints"
+    >
 
     </android.support.v7.widget.Toolbar>
 
@@ -26,38 +28,40 @@
             android:layout_marginEnd="@dimen/margin_small"
             android:layout_marginStart="@dimen/margin_small"
             app:layout_constraintTop_toTopOf="@+id/toolbarPriming"
-            android:layout_marginTop="@dimen/imageCardSideTop"/>
+            android:layout_marginTop="@dimen/imageCardSideTop"
+    />
 
     <TextView
-              android:id="@+id/textRegister"
-              android:layout_width="wrap_content"
-              android:layout_height="wrap_content"
-              android:text="@string/registerACard"
-              android:gravity="center"
-              android:textColor="@color/whinte"
-              android:textSize="@dimen/textSize_giant"
-              android:layout_marginEnd="@dimen/margin_small"
-              app:layout_constraintEnd_toEndOf="parent"
-              android:layout_marginStart="@dimen/margin_small"
-              app:layout_constraintStart_toStartOf="parent"
-              android:layout_marginTop="@dimen/margin_big"
-              app:layout_constraintTop_toBottomOf="@+id/imageCard"
-              />
+            android:id="@+id/textRegister"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:text="@string/registerACard"
+            android:gravity="center"
+            android:textColor="@color/whinte"
+            android:textSize="@dimen/textSize_giant"
+            android:layout_marginEnd="@dimen/margin_small"
+            app:layout_constraintEnd_toEndOf="parent"
+            android:layout_marginStart="@dimen/margin_small"
+            app:layout_constraintStart_toStartOf="parent"
+            android:layout_marginTop="@dimen/margin_big"
+            app:layout_constraintTop_toBottomOf="@+id/imageCard"
+    />
 
     <TextView
-              android:id="@+id/textInfo"
-              android:layout_width="wrap_content"
-              android:layout_height="wrap_content"
-              android:text="@string/infoText"
-              android:gravity="center"
-              android:textColor="@color/whinte"
-              android:textSize="@dimen/textSize_medium"
-              android:layout_marginStart="@dimen/margin_small"
-              android:layout_marginEnd="@dimen/margin_small"
-              app:layout_constraintEnd_toEndOf="parent"
-              app:layout_constraintStart_toStartOf="parent"
-              app:layout_constraintTop_toBottomOf="@+id/textRegister"
-              android:layout_marginTop="@dimen/margin_small"/>
+            android:id="@+id/textInfo"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:text="@string/infoText"
+            android:gravity="center"
+            android:textColor="@color/whinte"
+            android:textSize="@dimen/textSize_medium"
+            android:layout_marginStart="@dimen/margin_small"
+            android:layout_marginEnd="@dimen/margin_small"
+            app:layout_constraintEnd_toEndOf="parent"
+            app:layout_constraintStart_toStartOf="parent"
+            app:layout_constraintTop_toBottomOf="@+id/textRegister"
+            android:layout_marginTop="@dimen/margin_small"
+    />
 
     <Button
             android:id="@+id/register"

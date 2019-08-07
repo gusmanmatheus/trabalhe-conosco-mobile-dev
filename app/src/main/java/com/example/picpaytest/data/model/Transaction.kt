@@ -11,4 +11,5 @@ data class Transaction
      @SerializedName("destination_user")
      val destinationUser:User,
      val success:Boolean,
+     val timestamp: String,
      val status:String)
